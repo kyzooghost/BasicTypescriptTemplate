@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
     "start": "node dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ts-mocha -p tsconfig.json 'test/**/*.ts'",
     "try": "tsc && node dist"
   },
   "keywords": [],
@@ -21,12 +21,18 @@
     "winston": "^3.7.2"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^10.0.1",
     "@types/node": "^17.0.34",
     "@typescript-eslint/eslint-plugin": "^5.34.0",
     "@typescript-eslint/parser": "^5.34.0",
+    "chai": "^4.3.7",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "mocha": "^10.1.0",
+    "prettier": "^2.7.1",
+    "ts-mocha": "^10.0.0"
   }
 }
